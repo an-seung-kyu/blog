@@ -1,7 +1,7 @@
-package Sample01.Sample.controllor;
+package com.backend.blog.controller;
 
-import Sample01.Sample.model.User;
-import Sample01.Sample.service.UserService;
+import com.backend.blog.model.User;
+import com.backend.blog.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONObject;
