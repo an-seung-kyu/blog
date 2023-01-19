@@ -32,7 +32,7 @@ public class JwtTokenProvider {
     }
 
     public String createToken(User user) { //List<String> roles
-        Claims claims = Jwts.claims().setSubject(user.get_id()); //JWT payload 에 저장되는 정보단위, 보통 여기서 user를 식별하는 값을 넣는다.
+        Claims claims = Jwts.claims().setSubject(user.getUserEmail()); //JWT payload 에 저장되는 정보단위, 보통 여기서 user를 식별하는 값을 넣는다.
         claims.put("userEmail", user.getUserEmail());
         claims.put("userName", user.getUsername());
         Date now = new Date();

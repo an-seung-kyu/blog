@@ -17,7 +17,11 @@ public class UserService {
     private JwtTokenProvider jwtTokenProvider;
 
     public User getUserInfo(String userId) {
-        return userRepository.findUsersByUserEmail(userId);
+        System.out.println(userId);
+        User user = userRepository.findUsersByUserEmail(userId);
+        System.out.println(user);
+        if (user == null) throw new NullPointerException("검색하신 아이디가 존재하지 않습니다.");
+        return user;
     }
 
     public JSONObject findUsersByUserId (String userId) {
